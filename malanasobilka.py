@@ -1,18 +1,18 @@
 import random 
-
+body = 0 
 def nasobeni(a, b):
     vysledek = a * b
     return vysledek
-
+   
 def kontrola(vysledek, vysledek_zak):
-    body = 0 
+    global body
     if vysledek == vysledek_zak:
         print("správně")
-        body = (body+1)
+        body +=1
         print(body)
     else:
         print("špatně")
-        body = (body-1)
+        body = (body)
         print(body)
 for nasobilka in range(1,11):
     
@@ -21,10 +21,10 @@ for nasobilka in range(1,11):
     vysledek_zak = int(input(f"{x} * {y}="))
 
     vysledek = nasobeni(x,y)
-    kontrola(vysledek,vysledek_zak)
-    
+    kontrola(vysledek,vysledek_zak)   
 
-    
+print("Celkový počet bodů je: ",body)
+
 
 
      
